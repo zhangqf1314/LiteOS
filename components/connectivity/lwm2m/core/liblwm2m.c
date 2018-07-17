@@ -384,8 +384,8 @@ int lwm2m_configure(lwm2m_context_t * contextP,
         if(objectList[i] == NULL) // happens when undef CONFIG_FEATURE_FOTA
             continue;
         objectList[i]->next = NULL;
-			  contextP->objectList = (lwm2m_object_t *)LWM2M_LIST_ADD(contextP->objectList, objectList[i]);			
-		}
+	    contextP->objectList = (lwm2m_object_t *)LWM2M_LIST_ADD(contextP->objectList, objectList[i]);			
+	}
 
     return COAP_NO_ERROR;
 }
